@@ -2,6 +2,8 @@ package com.mmd.environment;
 
 import com.mmd.graphics.util.Tile;
 
+import java.awt.*;
+
 public class Room {
     public Tile[][] coordinatePlane;
     public int width = 79;
@@ -53,6 +55,20 @@ public class Room {
     public void setHeight(int height) {
         this.height = height;
     }
+
+
+    // these are likely not needed
+    public Tile coordinatePlane(int x, int y) {
+        return coordinatePlane[x][y];
+    }
+    public char glyph(int x, int y) {
+        return coordinatePlane(x, y).glyph();
+    }
+    public Color color(int x, int y) {
+        return coordinatePlane(x, y).color();
+    }
+    // above is likely not needed
+
 
     public StringBuilder showCoordinatePlane() {
         StringBuilder coordinatePlaneString = new StringBuilder("");

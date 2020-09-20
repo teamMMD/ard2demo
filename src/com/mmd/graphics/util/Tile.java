@@ -5,8 +5,9 @@ import asciiPanel.AsciiPanel;
 import java.awt.Color;
 
 public enum Tile {
-    WALL('♈', Color.green),
+    WALL((char)255, AsciiPanel.green),
     GROUND((char)250, AsciiPanel.brightBlack);
+//    WALL('♈', Color.green),
 
     private Color color;
     char glyph;
@@ -20,7 +21,15 @@ public enum Tile {
         return color;
     }
 
-    public char getCharacter() {
+    public char getGlyph() {
         return glyph;
+    }
+
+    public char glyph() {
+        return glyph;
+    }
+
+    public Color color() {
+        return color;
     }
 }
