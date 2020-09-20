@@ -1,4 +1,4 @@
-package com.mmd.screens;
+package com.mmd.graphics.screens;
 
 import asciiPanel.AsciiPanel;
 

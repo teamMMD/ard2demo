@@ -1,8 +1,8 @@
 package com.mmd.engine;
 
 import asciiPanel.AsciiPanel;
-import com.mmd.screens.PlayScreen;
-import com.mmd.screens.Screen;
+import com.mmd.graphics.screens.PlayScreen;
+import com.mmd.graphics.screens.Screen;
 
 import javax.swing.*;
 import java.awt.event.KeyEvent;
@@ -46,7 +46,7 @@ public class Paint extends JFrame implements KeyListener {
         System.out.println("whoopee a key was released...");
     }
 
-    public StringBuilder getLog() {
+    public void getLog() {
         System.out.println(log);
     }
 }
