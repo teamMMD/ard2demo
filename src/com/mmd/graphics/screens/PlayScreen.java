@@ -64,15 +64,19 @@ public class PlayScreen implements Screen {
                 return new PlayScreen();
             case KeyEvent.VK_W:
             case KeyEvent.VK_KP_UP:
+            case KeyEvent.VK_UP:
                 player.moveBy(0, -1); break;
             case KeyEvent.VK_A:
             case KeyEvent.VK_KP_LEFT:
+            case KeyEvent.VK_LEFT:
                 player.moveBy(-1, 0); break;
             case KeyEvent.VK_S:
             case KeyEvent.VK_KP_DOWN:
+            case KeyEvent.VK_DOWN:
                 player.moveBy(0, 1); break;
             case KeyEvent.VK_D:
             case KeyEvent.VK_KP_RIGHT:
+            case KeyEvent.VK_RIGHT:
                 player.moveBy(1, 0); break;
 
         }
