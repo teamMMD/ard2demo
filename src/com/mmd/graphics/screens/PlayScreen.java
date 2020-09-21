@@ -2,6 +2,7 @@ package com.mmd.graphics.screens;
 
 import asciiPanel.AsciiPanel;
 import com.mmd.environment.Room;
+import com.mmd.graphics.util.Tile;
 import com.mmd.meeples.Meeple;
 import com.mmd.meeples.Player;
 
@@ -17,15 +18,27 @@ public class PlayScreen implements Screen {
 
     @Override
     public void displayInAP(AsciiPanel ap) {
-        displayRoom(ap);
-        displayUI(ap);
+        if (!player.doorCheck(player.getX(), player.getY())) {
+            displayRoom(ap);
+            displayUI(ap);
+        } else {
+            ap.writeCenter("You win!", 11, Color.pink);
+        }
     }
 
     private void displayRoom(AsciiPanel ap) {
-
+        System.out.println(room.door.glyph + " " + room.door.getX() + " - " + room.door.getY());
         System.out.println(player.getX() + " - " + player.getY());
         for (int x = 0; x < screenWidth; x++) {
             for (int y = 0; y < screenHeight; y++) {
+                if (x == room.door.getX() && y == room.door.getY()) {
+                    room.coordinatePlane[x-1][y] = Tile.LDOOR;
+                    ap.write(room.coordinatePlane[x-1][y].glyph(), x-2, y, Color.CYAN);
+                    room.coordinatePlane[x-1][y] = Tile.MDOOR;
+                    ap.write(room.coordinatePlane[x-1][y].glyph(), x-1, y, Color.CYAN);
+                    room.coordinatePlane[x][y] = Tile.RDOOR;
+                    ap.write(room.coordinatePlane[x][y].glyph(), x, y);
+                }
                 if (x == player.getX() && y == player.getY())
                     ap.write(player.glyph(), x, y, player.color());
                 else

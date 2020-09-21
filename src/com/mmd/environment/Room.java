@@ -1,13 +1,16 @@
 package com.mmd.environment;
 
+import com.mmd.graphics.util.Door;
 import com.mmd.graphics.util.Tile;
 
 import java.awt.*;
+import java.util.Random;
 
 public class Room {
     public Tile[][] coordinatePlane;
     public int width = 79;
     public int height = 22;
+    public Door door = new Door(new Random().nextInt(74) + 2, 1);
 
     public Room() {
         setCoordinatePlane(width, height);

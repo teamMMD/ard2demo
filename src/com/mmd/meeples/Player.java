@@ -19,12 +19,31 @@ public class Player extends Meeple {
     }
 
     public void moveBy(int mx, int my) {
-        setX(x + mx);
-        setY(y + my);
+        int moveX = x + mx;
+        int moveY = y + my;
+        if (availableMove(moveX, moveY)) {
+            setX(moveX);
+            setY(moveY);
+            if (doorCheck(moveX, moveY)) {
+                System.out.println("found a door!");
+            }
+        } else
+            System.out.println("can't go that way!");
     }
 
     public boolean availableMove(int ax, int ay) {
-        return room.coordinatePlane(ax, ay) == null;
+        return room.coordinatePlane[ax][ay].glyph() == (char) 255 || doorCheck(ax, ay);
+    }
+
+    public boolean doorCheck(int dx, int dy) {
+        Boolean doorPresent = false;
+        if (
+            room.coordinatePlane[dx][dy].glyph() == (char) 192 ||
+            room.coordinatePlane[dx][dy].glyph() == (char) 196 ||
+            room.coordinatePlane[dx][dy].glyph() == (char) 217
+        )
+            doorPresent = true;
+        return doorPresent;
     }
 
     public StringBuilder getInv() {
