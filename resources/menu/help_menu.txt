@@ -1,0 +1,24 @@
+- Help Menu
+	"You asked for help, what item do you want to learn about?"
+	- Story Details
+		"This is a text based game, intro to what this help portion will be about"
+		- How do I win
+			"You can win by finding the boss and defeating him."
+			- How to find the boss
+				"Boss Bezos spawns somewhere on the map, you need to search and find him!"
+			- How to kill the boss
+				"You need special items to defeat Bezos. They are sword, sheild, potion, ..."
+		- What are rooms
+			"Rooms are good."
+		- How do I survive
+			"You kill the monsters."
+	- Game Controls
+		"To play the game, you type commands into the console. There are a plethora of commands to choose from, here are a few options. To call any of these, it is <command> <option>"
+		- move
+			"to move around the game you say move <direction>. Directions are north, south, west, east."
+		- pickup
+			"to pick up an item you say pickup <item>. If the item is in the room and can be picked up, it is added to your inventory."
+		- drop
+			"to drop an item from your inventory you say drop <item> and if the item can be dropped, it will be removed from your inventory and into the room"
+		- attack
+			"to attack an enemy, say attack <monster>. MORE DETAILS LATER WHEN WE FIGURE OUT HOW IT WORKS"

@@ -4,17 +4,17 @@ import asciiPanel.AsciiPanel;
 
 import java.awt.event.KeyEvent;
 
-public class HelpScreen implements Screen {
+public class TempScreen implements Screen {
 
     public PlayScreen playScreen;
 
-    public HelpScreen(PlayScreen playScreen) {
+    public TempScreen(PlayScreen playScreen) {
         this.playScreen = playScreen;
     }
 
     @Override
     public void displayInAP(AsciiPanel ap) {
-        ap.writeCenter("Help screen goes here", 11);
+        ap.writeCenter("Hi, I'm a helpful temp screen", 11);
     }
 
     @Override

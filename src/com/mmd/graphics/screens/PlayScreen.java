@@ -3,8 +3,8 @@ package com.mmd.graphics.screens;
 import asciiPanel.AsciiPanel;
 import com.mmd.environment.Room;
 import com.mmd.graphics.util.Tile;
-import com.mmd.meeples.Meeple;
 import com.mmd.meeples.Player;
+import com.mmd.screens.InitialHelpScreen;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -58,8 +58,8 @@ public class PlayScreen implements Screen {
         switch (key.getKeyCode()) {
             case KeyEvent.VK_ESCAPE:
                 System.exit(1);
-            case KeyEvent.VK_H:
-                return new HelpScreen(this);
+            case KeyEvent.VK_P:
+                return new TempScreen(this);
             case KeyEvent.VK_ENTER:
                 return new PlayScreen();
             case KeyEvent.VK_W:
@@ -78,7 +78,8 @@ public class PlayScreen implements Screen {
             case KeyEvent.VK_KP_RIGHT:
             case KeyEvent.VK_RIGHT:
                 player.moveBy(1, 0); break;
-
+            case KeyEvent.VK_H:
+                return new InitialHelpScreen(this);
         }
         return this;
     }
