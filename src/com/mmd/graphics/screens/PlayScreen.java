@@ -32,8 +32,8 @@ public class PlayScreen implements Screen {
         for (int x = 0; x < screenWidth; x++) {
             for (int y = 0; y < screenHeight; y++) {
                 if (x == room.door.getX() && y == room.door.getY()) {
-                    room.coordinatePlane[x-1][y] = Tile.LDOOR;
-                    ap.write(room.coordinatePlane[x-1][y].glyph(), x-2, y, Color.CYAN);
+                    room.coordinatePlane[x-2][y] = Tile.LDOOR;
+                    ap.write(room.coordinatePlane[x-2][y].glyph(), x-2, y, Color.CYAN);
                     room.coordinatePlane[x-1][y] = Tile.MDOOR;
                     ap.write(room.coordinatePlane[x-1][y].glyph(), x-1, y, Color.CYAN);
                     room.coordinatePlane[x][y] = Tile.RDOOR;
