@@ -24,11 +24,12 @@ public class LoadingScreen implements Screen {
         terminal.writeCenter(cm.l3, 20, Color.gray);
 
         // TODO: remove this later
-        terminal.writeCenter("~matthew~ press <W> to see win screen", 21);
-        terminal.writeCenter("~matthew~ press <L> to see lose screen", 22);
+        terminal.writeCenter("~matthew~ press <W> to see win screen", 15);
+        terminal.writeCenter("~matthew~ press <L> to see lose screen", 16);
 
 
-        terminal.writeCenter("[::]    press [Enter] to start yet 'Another Random Destiny'    [::]", 11, Color.white);
+        terminal.writeCenter("[::]    Press [Enter] to start yet 'Another Random Destiny'    [::]", 11, Color.white);
+        terminal.writeCenter("Press [Q] to quit", 22, Color.gray);
     }
 
     public Screen respondToUserInput(KeyEvent key) {
@@ -44,6 +45,8 @@ public class LoadingScreen implements Screen {
                 return new WinScreen(playScreen);
             case KeyEvent.VK_L:
                 return new LoseScreen(playScreen);
+            case KeyEvent.VK_Q:
+                return new QuitScreen(playScreen);
         }
         return this;
 //        return key.getKeyCode() == KeyEvent.VK_ENTER ? new TempScreen() : this;

@@ -24,8 +24,9 @@ public class GameControlsScreen implements Screen {
         terminal.writeCenter(gameControls.getParent().getChild(2).getDescription(), 11, Color.white);
         terminal.writeCenter(gameControls.getParent().getChild(3).getDescription(), 12, Color.white);
 
-        terminal.writeCenter("Press [B] to return to the previous screen", 21, Color.gray);
-        terminal.writeCenter("Press [Backspace] to return to the loadingScreen", 22, Color.gray);
+        terminal.writeCenter("Press [B] to return to the previous screen", 20, Color.gray);
+        terminal.writeCenter("Press [Backspace] to return to the loadingScreen", 21, Color.gray);
+        terminal.writeCenter("Press [Q] to quit", 22, Color.gray);
     }
 
     @Override
@@ -35,6 +36,8 @@ public class GameControlsScreen implements Screen {
                 return new LoadingScreen(playScreen);
             case KeyEvent.VK_B:
                 return new InitialHelpScreen(playScreen);
+            case KeyEvent.VK_Q:
+                return new QuitScreen(playScreen);
         }
         return this;
         //return new LoadingScreen(playScreen);
