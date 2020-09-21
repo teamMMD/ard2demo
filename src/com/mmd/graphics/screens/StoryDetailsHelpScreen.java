@@ -1,4 +1,4 @@
-package com.mmd.screens;
+package com.mmd.graphics.screens;
 
 import asciiPanel.AsciiPanel;
 import com.mmd.graphics.screens.PlayScreen;
@@ -10,12 +10,12 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 
 public class StoryDetailsHelpScreen implements Screen {
-    public PlayScreen playscreen;
+    public PlayScreen playScreen;
     public ConsoleManager cm = new ConsoleManager();
     public MenuTrieNode storyDetails = cm.read_xml().getChild(0);
 
     public StoryDetailsHelpScreen(PlayScreen playScreen) {
-        this.playscreen = playScreen;
+        this.playScreen = playScreen;
     }
 
     @Override
@@ -33,15 +33,15 @@ public class StoryDetailsHelpScreen implements Screen {
     public Screen respondToUserInput(KeyEvent key) {
         switch (key.getKeyCode()) {
             case KeyEvent.VK_0:
-                return new HowToWinHelpScreen();
+                return new HowToWinHelpScreen(playScreen);
             case KeyEvent.VK_1:
                 return new RoomsItemsSurviveHelpScreen();
             case KeyEvent.VK_BACK_SPACE:
-                return new LoadingScreen();
+                return new LoadingScreen(playScreen);
             case KeyEvent.VK_B:
-                return new InitialHelpScreen();
+                return new InitialHelpScreen(playScreen);
         }
-        return new LoadingScreen();
+        return new LoadingScreen(playScreen);
     }
 
 }

@@ -5,7 +5,6 @@ import asciiPanel.AsciiPanel;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.sql.SQLOutput;
-import com.mmd.ard.Game;
 
 public class WinScreen implements Screen {
     // TODO: need input for players name -> then add score to final_scores.txt
@@ -33,10 +32,10 @@ public class WinScreen implements Screen {
                 System.exit(1);
             case KeyEvent.VK_ENTER:
                 System.out.println("play again");
-                return new LoadingScreen();
+                return new LoadingScreen(playScreen);
             case KeyEvent.VK_S:
                 System.out.println("show all players scores");
-                return new ScoreScreen();
+                return new ScoreScreen(playScreen);
         }
         return this;
     }

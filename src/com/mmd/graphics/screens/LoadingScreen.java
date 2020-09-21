@@ -7,6 +7,12 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 
 public class LoadingScreen implements Screen {
+    PlayScreen playScreen;
+
+    public LoadingScreen(PlayScreen playScreen) {
+        this.playScreen = playScreen;
+    }
+
     @Override
     public void displayInAP(AsciiPanel terminal) {
         ConsoleManager cm = new ConsoleManager();
@@ -29,15 +35,15 @@ public class LoadingScreen implements Screen {
         System.out.println(key.getKeyCode());
         switch (key.getKeyCode()) {
             case KeyEvent.VK_ENTER:
-                return new PlayScreen();
+                return playScreen;
             case KeyEvent.VK_H:
-                return new InitialHelpScreen();
+                return new InitialHelpScreen(playScreen);
             case KeyEvent.VK_ESCAPE:
                 System.exit(1);
             case KeyEvent.VK_W:
-                return new WinScreen();
+                return new WinScreen(playScreen);
             case KeyEvent.VK_L:
-                return new LoseScreen();
+                return new LoseScreen(playScreen);
         }
         return this;
 //        return key.getKeyCode() == KeyEvent.VK_ENTER ? new TempScreen() : this;

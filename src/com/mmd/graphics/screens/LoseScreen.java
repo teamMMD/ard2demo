@@ -30,10 +30,10 @@ public class LoseScreen implements Screen {
                 System.exit(1);
             case KeyEvent.VK_ENTER:
                 System.out.println("play again");
-                return new LoadingScreen();
+                return new LoadingScreen(playScreen);
             case KeyEvent.VK_S:
                 System.out.println("show all players scores");
-                return new ScoreScreen();
+                return new ScoreScreen(playScreen);
         }
         return this;
     }

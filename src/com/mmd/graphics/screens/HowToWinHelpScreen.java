@@ -1,6 +1,8 @@
-package com.mmd.screens;
+package com.mmd.graphics.screens;
 
 import asciiPanel.AsciiPanel;
+import com.mmd.graphics.screens.InitialHelpScreen;
+import com.mmd.graphics.screens.LoadingScreen;
 import com.mmd.graphics.screens.PlayScreen;
 import com.mmd.graphics.screens.Screen;
 import com.mmd.util.ConsoleManager;
@@ -10,11 +12,11 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 
 public class HowToWinHelpScreen implements Screen {
-    PlayScreen playScreen;
-    ConsoleManager cm = new ConsoleManager();
-    MenuTrieNode howDoIwin = cm.read_xml().getChild(0).getChild(0);
-    MenuTrieNode howToFindBoss = cm.read_xml().getChild(0).getChild(0).getChild(0);
-    MenuTrieNode howToKillBoss = cm.read_xml().getChild(0).getChild(0).getChild(1);
+    public PlayScreen playScreen;
+    public ConsoleManager cm = new ConsoleManager();
+    public MenuTrieNode howDoIwin = cm.read_xml().getChild(0).getChild(0);
+    public MenuTrieNode howToFindBoss = cm.read_xml().getChild(0).getChild(0).getChild(0);
+    public MenuTrieNode howToKillBoss = cm.read_xml().getChild(0).getChild(0).getChild(1);
 
     public HowToWinHelpScreen(PlayScreen playScreen) {
         this.playScreen = playScreen;
@@ -39,10 +41,10 @@ public class HowToWinHelpScreen implements Screen {
     public Screen respondToUserInput(KeyEvent key) {
         switch (key.getKeyCode()) {
             case KeyEvent.VK_BACK_SPACE:
-                return new LoadingScreen();
+                return new LoadingScreen(playScreen);
             case KeyEvent.VK_B:
-                return new InitialHelpScreen();
+                return new InitialHelpScreen(playScreen);
         }
-        return new LoadingScreen();
+        return new LoadingScreen(playScreen);
     }
 }

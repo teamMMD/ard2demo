@@ -4,7 +4,6 @@ import asciiPanel.AsciiPanel;
 import com.mmd.environment.Room;
 import com.mmd.graphics.util.Tile;
 import com.mmd.meeples.Player;
-import com.mmd.screens.InitialHelpScreen;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;

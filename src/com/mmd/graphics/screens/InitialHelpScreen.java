@@ -54,8 +54,7 @@ public class InitialHelpScreen implements Screen {
 //                [3, How do I survive]
 //                [b, back]
 //                [q, quit]
-//                return new StoryDetailsHelpScreen();
-                return new TempScreen(new PlayScreen());
+                return new StoryDetailsHelpScreen(playScreen);
             case KeyEvent.VK_1:
 //                <Game Controls>
 //                To play the game, you type commands into the console.
@@ -67,7 +66,7 @@ public class InitialHelpScreen implements Screen {
 //                [b, back]
 //                [q, quit]
                 // TODO: WE DO NOT NEED THE MENU ABOVE BECAUSE ARD2.0 DOESN'T UTILIZE ANY USER INPUT, ONLY ARROW KEYS
-//                return new GameControlsScreen();
+                return new GameControlsScreen(playScreen);
         }
         return this;
     }

@@ -36,10 +36,10 @@ public class RoomsItemsSurviveHelpScreen implements Screen{
     public Screen respondToUserInput(KeyEvent key) {
         switch (key.getKeyCode()) {
             case KeyEvent.VK_BACK_SPACE:
-                return new LoadingScreen();
+                return new LoadingScreen(playScreen);
             case KeyEvent.VK_B:
-                return new StoryDetailsHelpScreen();
+                return new StoryDetailsHelpScreen(playScreen);
         }
-        return new LoadingScreen();
+        return new LoadingScreen(playScreen);
     }
 }
