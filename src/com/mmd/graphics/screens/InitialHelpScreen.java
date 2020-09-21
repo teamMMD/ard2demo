@@ -1,4 +1,4 @@
-package com.mmd.screens;
+package com.mmd.graphics.screens;
 
 import asciiPanel.AsciiPanel;
 import com.mmd.graphics.screens.TempScreen;
@@ -22,7 +22,6 @@ public class InitialHelpScreen implements Screen {
 
     @Override
     public void displayInAP(AsciiPanel ap) {
-
         ap.writeCenter(cm.read_xml().getTitle(), 4, Color.orange);
 
 //      "YOU asked for help, what item do you want to learn about?"
@@ -59,7 +58,7 @@ public class InitialHelpScreen implements Screen {
                 return new TempScreen(new PlayScreen());
             case KeyEvent.VK_1:
 //                <Game Controls>
-//                To play the game, you type commands into the console. There are a plethora of commands to choose from, here are a few options. To call any of these, it is [command] [option]
+//                To play the game, you type commands into the console.
 //                [0, move]
 //                [1, pickup]
 //                [2, drop]
