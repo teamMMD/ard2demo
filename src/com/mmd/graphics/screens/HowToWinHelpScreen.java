@@ -33,8 +33,8 @@ public class HowToWinHelpScreen implements Screen {
         terminal.writeCenter(howToKillBoss.getTitle(), 10, Color.orange);
         terminal.writeCenter(howToKillBoss.getDescription(), 11, Color.white);
 
-        terminal.writeCenter("hit [b] to return to the previous screen", 21, Color.gray);
-        terminal.writeCenter("hit [backspace] to return to the loadingScreen", 22, Color.gray);
+        terminal.writeCenter("Press [B] to return to the previous screen", 21, Color.gray);
+        terminal.writeCenter("Press [Backspace] to return to the loadingScreen", 22, Color.gray);
     }
 
     @Override
@@ -43,7 +43,7 @@ public class HowToWinHelpScreen implements Screen {
             case KeyEvent.VK_BACK_SPACE:
                 return new LoadingScreen(playScreen);
             case KeyEvent.VK_B:
-                return new InitialHelpScreen(playScreen);
+                return new StoryDetailsHelpScreen(playScreen);
         }
         return new LoadingScreen(playScreen);
     }

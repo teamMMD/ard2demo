@@ -20,7 +20,7 @@ public class LoseScreen implements Screen {
         // show scores
         terminal.writeCenter("currentPlayer.getName() + your score is XXX", 11, Color.white);
 
-        terminal.writeCenter("hit <esc> to exit, <s> to see all high scores, or <enter> to play again =)", 22, Color.gray);
+        terminal.writeCenter("Press [ESC] to exit, [S] to see all high scores, or [Enter] to play again =)", 22, Color.gray);
     }
 
     @Override

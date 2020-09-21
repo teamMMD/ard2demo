@@ -24,17 +24,17 @@ public class InitialHelpScreen implements Screen {
     public void displayInAP(AsciiPanel ap) {
         ap.writeCenter(cm.read_xml().getTitle(), 4, Color.orange);
 
-//      "YOU asked for help, what item do you want to learn about?"
+        // "YOU asked for help, what item do you want to learn about?"
         ap.writeCenter(cm.read_xml().getDescription(), 6, Color.white);
 
         // "[0, Story Details]"
-        ap.writeCenter("Press <0> to see " + storyDetails.getTitle(), 8, Color.white);
+        ap.writeCenter("Press [0] to see " + storyDetails.getTitle(), 8, Color.white);
         // "[1, Game Controls]"
-        ap.writeCenter("Press <1> to see " + gameControl.getTitle(), 9, Color.white);
+        ap.writeCenter("Press [1] to see " + gameControl.getTitle(), 9, Color.white);
 
-        ap.writeCenter("Press <b> to go back", 11);
-        ap.writeCenter("Press <q> to quit", 12);
-        ap.writeCenter("hit [backspace] to return to the loadingScreen", 22, Color.gray);
+        ap.writeCenter("Press [B] to resume game", 11);
+        ap.writeCenter("Press [Q] to quit", 12);
+        ap.writeCenter("Press [Backspace] to return to the loading screen", 22, Color.gray);
     }
 
     @Override
@@ -43,29 +43,12 @@ public class InitialHelpScreen implements Screen {
             case KeyEvent.VK_ESCAPE:
             case KeyEvent.VK_ENTER:
             case KeyEvent.VK_BACK_SPACE:
+                return new LoadingScreen(playScreen);
             case KeyEvent.VK_B:
                 return playScreen;
             case KeyEvent.VK_0:
-//                <Story Details>
-//                This is a text based game, intro to what this help portion will be about.
-//                [0, How do I win]
-//                [1, What are rooms]
-//                [2, What are items]
-//                [3, How do I survive]
-//                [b, back]
-//                [q, quit]
                 return new StoryDetailsHelpScreen(playScreen);
             case KeyEvent.VK_1:
-//                <Game Controls>
-//                To play the game, you type commands into the console.
-//                [0, move]
-//                [1, pickup]
-//                [2, drop]
-//                [3, fight]
-//                [4, use power]
-//                [b, back]
-//                [q, quit]
-                // TODO: WE DO NOT NEED THE MENU ABOVE BECAUSE ARD2.0 DOESN'T UTILIZE ANY USER INPUT, ONLY ARROW KEYS
                 return new GameControlsScreen(playScreen);
         }
         return this;

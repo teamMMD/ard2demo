@@ -9,7 +9,6 @@ import java.awt.event.KeyEvent;
 
 public class GameControlsScreen implements Screen {
     public PlayScreen playScreen;
-
     public GameControlsScreen(PlayScreen playScreen) {
         this.playScreen = playScreen;
     }
@@ -24,13 +23,9 @@ public class GameControlsScreen implements Screen {
         terminal.writeCenter(gameControls.getParent().getChild(1).getDescription(), 10, Color.white);
         terminal.writeCenter(gameControls.getParent().getChild(2).getDescription(), 11, Color.white);
         terminal.writeCenter(gameControls.getParent().getChild(3).getDescription(), 12, Color.white);
-        // wasd***
-//        terminal.writeCenter("to go " + Direction.North + " press the <up> arrow key.", 9, Color.white);
-//        terminal.writeCenter("to go " + Direction.South + " press the <down> arrow key.", 10, Color.white);
-//        terminal.writeCenter("to go " + Direction.East + " press the <right> arrow key.", 11, Color.white);
-//        terminal.writeCenter("to go " + Direction.West + " press the <left> arrow key.", 12, Color.white);
-        terminal.writeCenter("hit [b] to return to the previous screen", 21, Color.gray);
-        terminal.writeCenter("hit [backspace] to return to the loadingScreen", 22, Color.gray);
+
+        terminal.writeCenter("Press [B] to return to the previous screen", 21, Color.gray);
+        terminal.writeCenter("Press [Backspace] to return to the loadingScreen", 22, Color.gray);
     }
 
     @Override
@@ -42,6 +37,7 @@ public class GameControlsScreen implements Screen {
                 return new InitialHelpScreen(playScreen);
         }
         return this;
+        //return new LoadingScreen(playScreen);
     }
 
 }

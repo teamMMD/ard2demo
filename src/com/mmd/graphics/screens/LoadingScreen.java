@@ -28,7 +28,7 @@ public class LoadingScreen implements Screen {
         terminal.writeCenter("~matthew~ press <L> to see lose screen", 22);
 
 
-        terminal.writeCenter("[::]    press [enter] to start yet 'Another Random Destiny'    [::]", 11, Color.white);
+        terminal.writeCenter("[::]    press [Enter] to start yet 'Another Random Destiny'    [::]", 11, Color.white);
     }
 
     public Screen respondToUserInput(KeyEvent key) {
