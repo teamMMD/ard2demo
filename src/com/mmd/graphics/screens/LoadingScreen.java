@@ -5,6 +5,8 @@ import com.mmd.util.ConsoleManager;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.io.IOException;
+import java.util.Objects;
 
 public class LoadingScreen implements Screen {
     PlayScreen playScreen;
@@ -27,6 +29,7 @@ public class LoadingScreen implements Screen {
         terminal.writeCenter("~matthew~ press <W> to see win screen", 21);
         terminal.writeCenter("~matthew~ press <L> to see lose screen", 22);
 
+        terminal.writeCenter("PRESS <R> to resume game", 18);
 
         terminal.writeCenter("[::]    press [Enter] to start yet 'Another Random Destiny'    [::]", 11, Color.white);
     }
@@ -34,8 +37,16 @@ public class LoadingScreen implements Screen {
     public Screen respondToUserInput(KeyEvent key) {
         System.out.println(key.getKeyCode());
         switch (key.getKeyCode()) {
+            case KeyEvent.VK_R:
+//                if (playScreen != null) {
+//                    return playScreen;
+//                } else {
+//                    return new LoadingScreen(playScreen);
+//                }
+                return Objects.requireNonNullElseGet(playScreen, () -> new LoadingScreen(playScreen));
             case KeyEvent.VK_ENTER:
-                return playScreen;
+//                return playScreen;
+            return new PlayScreen();
             case KeyEvent.VK_H:
                 return new InitialHelpScreen(playScreen);
             case KeyEvent.VK_ESCAPE:
@@ -47,6 +58,5 @@ public class LoadingScreen implements Screen {
         }
         return this;
 //        return key.getKeyCode() == KeyEvent.VK_ENTER ? new TempScreen() : this;
-
     }
 }

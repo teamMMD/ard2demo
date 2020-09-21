@@ -14,15 +14,20 @@ public class PlayScreen implements Screen {
     private Room room = new Room(screenWidth, screenHeight);
     private Player player = player = new Player(room, (char)65, Color.orange, 39, 11);;
 
-
     @Override
     public void displayInAP(AsciiPanel ap) {
         if (!player.doorCheck(player.getX(), player.getY())) {
             displayRoom(ap);
             displayUI(ap);
         } else {
-            ap.writeCenter("You win!", 11, Color.pink);
+//            ap.writeCenter("You win!", 11, Color.pink);
+            winCondition(this);
+            System.out.println("win condition method working");
         }
+    }
+
+    public WinScreen winCondition(PlayScreen playScreen) {
+        return new WinScreen(playScreen);
     }
 
     private void displayRoom(AsciiPanel ap) {
@@ -79,6 +84,8 @@ public class PlayScreen implements Screen {
                 player.moveBy(1, 0); break;
             case KeyEvent.VK_H:
                 return new InitialHelpScreen(this);
+            case KeyEvent.VK_BACK_SLASH:
+                return new WinScreen(this);
         }
         return this;
     }

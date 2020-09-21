@@ -1,6 +1,7 @@
 package com.mmd.engine;
 
 import asciiPanel.AsciiPanel;
+import com.mmd.graphics.screens.LoadingScreen;
 import com.mmd.graphics.screens.PlayScreen;
 import com.mmd.graphics.screens.Screen;
 
@@ -14,12 +15,14 @@ public class Paint extends JFrame implements KeyListener {
     private Screen screen;
     private StringBuilder log;
 
+    PlayScreen playScreen;
+
     public Paint() {
         super();
         ap = new AsciiPanel();
         add(ap);
         pack();
-        screen = (Screen) new PlayScreen();
+        screen = (Screen) new LoadingScreen(playScreen);
         addKeyListener(this);
         repaint();
     }
