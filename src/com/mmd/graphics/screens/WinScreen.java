@@ -20,6 +20,7 @@ public class WinScreen implements Screen {
         terminal.writeCenter("!!! CONGRATS YOU WIN !!!", 5, Color.orange);
 
         // show scores
+        // TODO: score + name tracking
         terminal.writeCenter("currentPlayer.getName() + your score is XXX", 11, Color.white);
 
         terminal.writeCenter("hit <esc> to exit, <s> to see all high scores, or <enter> to play again =)", 22, Color.gray);
