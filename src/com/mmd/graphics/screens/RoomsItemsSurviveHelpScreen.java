@@ -14,6 +14,10 @@ public class RoomsItemsSurviveHelpScreen implements Screen{
     MenuTrieNode whatAreItems = cm.read_xml().getChild(0).getChild(2);
     MenuTrieNode howDoISurvive = cm.read_xml().getChild(0).getChild(3);
 
+    public RoomsItemsSurviveHelpScreen(PlayScreen playScreen) {
+        this.playScreen = playScreen;
+    }
+
     @Override
     public void displayInAP(AsciiPanel terminal) {
         terminal.writeCenter(whatAreRooms.getTitle(), 4, Color.orange);
@@ -28,8 +32,8 @@ public class RoomsItemsSurviveHelpScreen implements Screen{
         terminal.writeCenter(howDoISurvive.getTitle(), 13, Color.orange);
         terminal.writeCenter(howDoISurvive.getDescription().substring(0,55), 14, Color.white);
 
-        terminal.writeCenter("hit [b] to return to the previous screen", 21,Color.gray);
-        terminal.writeCenter("hit [backspace] to return to the loadingScreen", 22, Color.gray);
+        terminal.writeCenter("Press [B] to return to the previous screen", 21,Color.gray);
+        terminal.writeCenter("Press [Backspace] to return to the loadingScreen", 22, Color.gray);
     }
 
     @Override
