@@ -36,14 +36,13 @@ public class Paint extends JFrame implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        log.append(", ").append(e.getKeyCode());
         screen = screen.respondToUserInput(e);
         repaint();
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-        System.out.println("whoopee a key was released...");
+
     }
 
     public void getLog() {

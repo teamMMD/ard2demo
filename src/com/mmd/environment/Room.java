@@ -25,14 +25,16 @@ public class Room {
         System.out.println("populating plane");
         for (int x = 0; x < getWidth(); x++) {
             for (int y = 0; y < getHeight(); y++) {
-                if (y < 2 || y > getHeight() - 2)
+                if (y < 2 || y > getHeight() - 3)
                     coordinatePlane[x][y] = Tile.WALL;
-                if (x < 2 || x > getWidth() -2)
+                else if (x < 2 || x > getWidth() - 3)
                     coordinatePlane[x][y] = Tile.WALL;
                 else
                     coordinatePlane[x][y] = Tile.GROUND;
             }
         }
+        // randomizer:
+
     }
 
     public Tile[][] getCoordinatePlane() {
