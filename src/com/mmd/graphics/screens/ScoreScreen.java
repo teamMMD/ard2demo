@@ -69,21 +69,9 @@ public class ScoreScreen implements Screen {
             }
         }
 
-//        if(!sortedScoresMap.isEmpty()) {
-//            Iterator it = sortedScoresMap.entrySet().iterator();
-//            while(it.hasNext()) {
-//                Map.Entry keyValuePair = (Map.Entry)it.next();
-//                // write to terminal -> all values of sorted TreeMap
-//                terminal.writeCenter(keyValuePair.getValue().toString(), y, Color.white);
-//                // print to next line in terminal/panel
-//                y++;
-//            }
-//        }
-
-
         terminal.writeCenter("SCORES:", 2, Color.orange);
-        terminal.writeCenter("hit [b] to return to the previous screen", 21, Color.gray);
-        terminal.writeCenter("hit [backspace] to return to the loadingScreen", 22, Color.gray);
+        terminal.writeCenter("Press [B] to return to the previous screen", 21, Color.gray);
+        terminal.writeCenter("Press [Backspace] to return to the loadingScreen", 22, Color.gray);
     }
 
     @Override
