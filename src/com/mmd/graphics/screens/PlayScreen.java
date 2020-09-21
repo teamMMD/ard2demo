@@ -17,16 +17,15 @@ public class PlayScreen implements Screen {
 
     @Override
     public void displayInAP(AsciiPanel ap) {
-//        ap.writeCenter("look at that a playscreen", 9);
         displayRoom(ap);
+        displayUI(ap);
     }
 
     private void displayRoom(AsciiPanel ap) {
-//        room = new Room(screenWidth, screenHeight);
-//        player = new Player(room, (char)65, Color.orange, 39, 11);
+
         System.out.println(player.getX() + " - " + player.getY());
-        for (int x = 0; x < room.getWidth(); x++) {
-            for (int y = 0; y < room.getHeight(); y++) {
+        for (int x = 0; x < screenWidth; x++) {
+            for (int y = 0; y < screenHeight; y++) {
                 if (x == player.getX() && y == player.getY())
                     ap.write(player.glyph(), x, y, player.color());
                 else
@@ -35,23 +34,34 @@ public class PlayScreen implements Screen {
         }
     }
 
+    public void displayUI(AsciiPanel ap) {
+        ap.write("Health: " + player.getHealth() + " / " + player.maxHP, 4, 23, Color.orange);
+        ap.write("Inventory: " + player.getInv(), 54, 23);
+        ap.write("RoomName: " + "Proving Grounds", 54, 0);
+    }
+
     @Override
     public Screen respondToUserInput(KeyEvent key) {
         switch (key.getKeyCode()) {
             case KeyEvent.VK_ESCAPE:
                 System.exit(1);
-//            case KeyEvent.VK_LEFT:
-//                return new TempScreen();
-//            case KeyEvent.VK_ENTER:
-//                return new PlayScreen();
+            case KeyEvent.VK_H:
+                return new HelpScreen(this);
+            case KeyEvent.VK_ENTER:
+                return new PlayScreen();
             case KeyEvent.VK_W:
+            case KeyEvent.VK_KP_UP:
                 player.moveBy(0, -1); break;
             case KeyEvent.VK_A:
+            case KeyEvent.VK_KP_LEFT:
                 player.moveBy(-1, 0); break;
             case KeyEvent.VK_S:
+            case KeyEvent.VK_KP_DOWN:
                 player.moveBy(0, 1); break;
             case KeyEvent.VK_D:
+            case KeyEvent.VK_KP_RIGHT:
                 player.moveBy(1, 0); break;
+
         }
         return this;
     }

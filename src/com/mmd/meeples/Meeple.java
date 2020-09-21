@@ -10,6 +10,8 @@ public class Meeple {
     private char glyph;
     private Color color;
 
+    public int health;
+
     public String getName() {
         return name;
     }
@@ -45,6 +47,13 @@ public class Meeple {
     }
     public void setColor(Color color) {
         this.color = color;
+    }
+
+    public void updateHealth(int hp) {
+        this.health = hp;
+    }
+    public int getHealth() {
+        return health;
     }
 
 }
