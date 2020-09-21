@@ -6,7 +6,11 @@ import java.awt.Color;
 
 public enum Tile {
     WALL((char)250, AsciiPanel.green),          // "."
-    GROUND((char)255, AsciiPanel.brightBlack);  // " "
+    GROUND((char)255, AsciiPanel.brightBlack),  // " "
+    LDOOR((char)192, Color.CYAN),               // "└"
+    MDOOR((char)196, Color.CYAN),               // "─"
+    RDOOR((char)217, Color.CYAN);               // "┘"
+    // doors are three part: left+mid+right -->   "└─┘"
 
     private Color color;
     char glyph;
