@@ -15,7 +15,7 @@ public class MeepleFactory {
 //        room.entryDoor(player);
 //    }
 
-    public Meeple newMonster() {
-        return new Meeple();
+    public static Monster createMonster() {
+        return new Monster();
     }
 }

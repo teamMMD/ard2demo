@@ -2,15 +2,19 @@ package com.mmd.meeples;
 
 import java.awt.*;
 
-public class Meeple {
-    public String name;
-    public int x;
-    public int y;
+public abstract class Meeple {
+    private String name;
+    private String description;
+    private int health;
 
     private char glyph;
     private Color color;
 
-    public int health;
+    public int x;
+    public int y;
+
+    public abstract void moveBy(int mx, int my);
+    public abstract void attack();
 
     public String getName() {
         return name;
@@ -20,7 +24,6 @@ public class Meeple {
     }
 
     // set position in coordinate plane
-
     public int getX() {
         return x;
     }
@@ -33,6 +36,14 @@ public class Meeple {
     }
     public void setY(int y) {
         this.y = y;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public char glyph() {

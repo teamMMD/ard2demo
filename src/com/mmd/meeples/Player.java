@@ -28,6 +28,10 @@ public class Player extends Meeple {
         updateHealth(100);
     }
 
+    public void attack() {
+        // TODO: implement attack sequence
+    }
+
     public void moveBy(int mx, int my) {
         int moveX = x + mx;
         int moveY = y + my;
@@ -68,7 +72,7 @@ public class Player extends Meeple {
     public String toString() {
         return "Player{" +
                 "room=" + room +
-                ", name='" + name + '\'' +
+                ", name='" + this.getName() + '\'' +
                 ", x=" + x +
                 ", y=" + y +
                 '}';
