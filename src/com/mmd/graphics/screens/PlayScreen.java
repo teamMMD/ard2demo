@@ -35,8 +35,8 @@ public class PlayScreen implements Screen {
                 monsterInRoom = false;
                 ap.writeCenter("You fought the monster!", 22, Color.RED);
             }
-            System.out.println("player: " + player.getX() + " - " + player.getY());
-            System.out.println("monster: " + monster.getX() + " - " + monster.getY());
+            //System.out.println("player: " + player.getX() + " - " + player.getY());
+            //System.out.println("monster: " + monster.getX() + " - " + monster.getY());
             player.updateHealth(-1);
             displayRoom(ap);
             displayUI(ap);
