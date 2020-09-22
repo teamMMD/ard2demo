@@ -2,8 +2,10 @@ package com.mmd.environment;
 
 import com.mmd.graphics.util.Door;
 import com.mmd.graphics.util.Tile;
+import com.mmd.util.MiniMap;
 
 import java.awt.*;
+import java.util.Arrays;
 import java.util.Random;
 
 public class Room {
@@ -11,10 +13,18 @@ public class Room {
     public int width = 79;
     public int height = 22;
     public Door door = new Door(new Random().nextInt(74) + 2, 1);
+    public String roomName;
+    public MiniMap minMap = new MiniMap();
 
     public Room() {
         setCoordinatePlane(width, height);
         populateCoordinatePlane();
+    }
+
+    public Room(String roomName) {
+        setCoordinatePlane(width, height);
+        populateCoordinatePlane();
+        this.roomName = roomName;
     }
 
     public Room(int x, int y) {
@@ -25,7 +35,7 @@ public class Room {
     }
 
     public void populateCoordinatePlane() {
-        System.out.println("populating plane");
+//        System.out.println("populating plane");
         for (int x = 0; x < getWidth(); x++) {
             for (int y = 0; y < getHeight(); y++) {
                 if (y < 2 || y > getHeight() - 3)
@@ -86,5 +96,17 @@ public class Room {
         return coordinatePlaneString;
     }
 
+    public String getRoomName() {
+        return roomName;
+    }
 
+    @Override
+    public String toString() {
+        return roomName + " {" +
+//                "coordinatePlane=" + Arrays.toString(coordinatePlane) +
+                ", width=" + width +
+                ", height=" + height +
+                ", door=" + door +
+                " }";
+    }
 }

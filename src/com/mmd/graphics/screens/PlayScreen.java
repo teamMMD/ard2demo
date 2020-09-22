@@ -11,17 +11,20 @@ import java.awt.event.KeyEvent;
 public class PlayScreen implements Screen {
     private int screenWidth = 79;
     private int screenHeight = 22;
-    private Room room = new Room(screenWidth, screenHeight);
-    private Player player = player = new Player(room, (char)65, Color.orange, 39, 11);;
-
+    private Room room = new Room(79, 22);
+    private Player player = player = new Player(room, (char)65, Color.orange, 39, room.getHeight() - 2);;
+    private boolean moveOn = false;
 
     @Override
     public void displayInAP(AsciiPanel ap) {
         if (!player.doorCheck(player.getX(), player.getY())) {
+            player.updateHealth(-1);
             displayRoom(ap);
             displayUI(ap);
         } else {
-            ap.writeCenter("You win!", 11, Color.pink);
+            ap.writeCenter("Press [up]/[w] to move to the next room!", 11, Color.GREEN);
+            ap.writeCenter("...if you dare...", 12, Color.GREEN);
+            moveOn = true;
         }
     }
 
@@ -54,6 +57,7 @@ public class PlayScreen implements Screen {
 
     @Override
     public Screen respondToUserInput(KeyEvent key) {
+        if (moveOn) return new PlayScreen();
         switch (key.getKeyCode()) {
             case KeyEvent.VK_ESCAPE:
                 System.exit(1);

@@ -50,7 +50,7 @@ public class Meeple {
     }
 
     public void updateHealth(int hp) {
-        this.health = hp;
+        this.health = this.getHealth() + hp;
     }
     public int getHealth() {
         return health;
