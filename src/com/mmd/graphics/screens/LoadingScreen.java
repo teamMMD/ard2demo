@@ -10,6 +10,7 @@ import java.util.Objects;
 
 public class LoadingScreen implements Screen {
     PlayScreen playScreen;
+    PlayerNameScreen playerNameScreen;
 
     public LoadingScreen(PlayScreen playScreen) {
         this.playScreen = playScreen;
@@ -21,16 +22,11 @@ public class LoadingScreen implements Screen {
         System.out.println(cm.l1 + cm.l2 + cm.l3);
 
         //terminal.writeCenter(cm.l1, 1, Color.black, Color.green);
-        terminal.writeCenter(cm.l1, 2, Color.orange);
-        terminal.writeCenter(cm.l2, 3, Color.orange);
+        terminal.writeCenter(cm.l1, 3, Color.orange);
+        terminal.writeCenter(cm.l2, 4, Color.orange);
         terminal.writeCenter(cm.l3, 20, Color.gray);
 
-        // TODO: remove this later
-        terminal.writeCenter("~matthew~ press <W> to see win screen", 15);
-        terminal.writeCenter("~matthew~ press <L> to see lose screen", 16);
-
-        terminal.writeCenter("PRESS <R> to resume game", 18);
-
+        terminal.writeCenter("Press [R] to resume game", 18);
         terminal.writeCenter("[::]    Press [Enter] to start yet 'Another Random Destiny'    [::]", 11, Color.white);
         terminal.writeCenter("Press [Q] to quit", 22, Color.gray);
     }
@@ -46,20 +42,20 @@ public class LoadingScreen implements Screen {
 //                }
                 return Objects.requireNonNullElseGet(playScreen, () -> new LoadingScreen(playScreen));
             case KeyEvent.VK_ENTER:
-//                return playScreen;
-            return new PlayScreen();
+            return new PlayerNameScreen();
             case KeyEvent.VK_H:
                 return new InitialHelpScreen(playScreen);
             case KeyEvent.VK_ESCAPE:
                 System.exit(1);
             case KeyEvent.VK_W:
-                return new WinScreen(playScreen);
+                return new WinScreen(playScreen, playerNameScreen);
             case KeyEvent.VK_L:
                 return new LoseScreen(playScreen);
             case KeyEvent.VK_Q:
                 return new QuitScreen(playScreen);
+            case KeyEvent.VK_N:
+                return new PlayerNameScreen();
         }
         return this;
-//        return key.getKeyCode() == KeyEvent.VK_ENTER ? new TempScreen() : this;
     }
 }

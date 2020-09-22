@@ -46,5 +46,4 @@ public class StoryDetailsHelpScreen implements Screen {
         }
         return new LoadingScreen(playScreen);
     }
-
 }

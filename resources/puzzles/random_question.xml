@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <response_code>0</response_code>
+    <results>
+        <puzzle>
+            <category>Sports</category>
+            <correct_answer>Puma</correct_answer>
+            <difficulty>medium</difficulty>
+            <incorrect_answers>
+                <element>Nike</element>
+                <element>Adidas</element>
+                <element>Reebok</element>
+            </incorrect_answers>
+            <question>Which German sportswear company's logo is the 'Formstripe'?</question>
+            <type>multiple</type>
+        </puzzle>
+        <puzzle>
+            <category>Entertainment: Video Games</category>
+            <correct_answer>Lucas</correct_answer>
+            <difficulty>medium</difficulty>
+            <incorrect_answers>
+                <element>Mega Man</element>
+                <element>Meta Knight</element>
+                <element>Diddy Kong</element>
+            </incorrect_answers>
+            <question>Which of the following characters were considered for inclusion in Super Smash Bros. Melee?</question>
+            <type>multiple</type>
+        </puzzle>
+        <puzzle>
+            <category>Entertainment: Video Games</category>
+            <correct_answer>Unhinged Spirit</correct_answer>
+            <difficulty>hard</difficulty>
+            <incorrect_answers>
+                <element>Shoryugeki</element>
+                <element>Provoke</element>
+                <element>Demon Riot</element>
+            </incorrect_answers>
+            <question>In Monster Hunter Generations, which of these hunter arts are exclusive to the Longsword?</question>
+            <type>multiple</type>
+        </puzzle>
+        <puzzle>
+            <category>Entertainment: Video Games</category>
+            <correct_answer>Partisan Eagle</correct_answer>
+            <difficulty>hard</difficulty>
+            <incorrect_answers>
+                <element>Blast Fencer</element>
+                <element>Winged Viper</element>
+                <element>Bastion Warrior</element>
+            </incorrect_answers>
+            <question>In Xenoblade Chronicles X, which class has a sniper rifle as it's primary weapon?</question>
+            <type>multiple</type>
+        </puzzle>
+        <puzzle>
+            <category>Entertainment: Books</category>
+            <correct_answer>42</correct_answer>
+            <difficulty>medium</difficulty>
+            <incorrect_answers>
+                <element>Loving everyone around you</element>
+                <element>Chocolate</element>
+                <element>Death</element>
+            </incorrect_answers>
+            <question>According to The Hitchhiker's Guide to the Galaxy book, the answer to life, the universe and everything else is...</question>
+            <type>multiple</type>
+        </puzzle>
+        <puzzle>
+            <category>Entertainment: Japanese Anime &amp; Manga</category>
+            <correct_answer>Freedom</correct_answer>
+            <difficulty>hard</difficulty>
+            <incorrect_answers>
+                <element>Promise</element>
+                <element>Adventure</element>
+                <element>Friendship</element>
+            </incorrect_answers>
+            <question>In "One Piece", what does "the Pirate King"; mean to the captain of the Straw Hat Pirates?</question>
+            <type>multiple</type>
+        </puzzle>
+        <puzzle>
+            <category>Entertainment: Video Games</category>
+            <correct_answer>True</correct_answer>
+            <difficulty>easy</difficulty>
+            <incorrect_answers>
+                <element>False</element>
+            </incorrect_answers>
+            <question>In "Need for Speed: Porsche Unleashed", the player can only drive cars manufactured by Porsche.</question>
+            <type>boolean</type>
+        </puzzle>
+        <puzzle>
+            <category>Entertainment: Music</category>
+            <correct_answer>True</correct_answer>
+            <difficulty>easy</difficulty>
+            <incorrect_answers>
+                <element>False</element>
+            </incorrect_answers>
+            <question>In 1993, Prince changed his name to an unpronounceable symbol because he was unhappy with his contract with Warner Bros.</question>
+            <type>boolean</type>
+        </puzzle>
+        <puzzle>
+            <category>Animals</category>
+            <correct_answer>Burrow</correct_answer>
+            <difficulty>easy</difficulty>
+            <incorrect_answers>
+                <element>Nest</element>
+                <element>Den</element>
+                <element>Dray</element>
+            </incorrect_answers>
+            <question>What is the name of a rabbit's abode?</question>
+            <type>multiple</type>
+        </puzzle>
+        <puzzle>
+            <category>History</category>
+            <correct_answer>Charles Guiteau</correct_answer>
+            <difficulty>hard</difficulty>
+            <incorrect_answers>
+                <element>Sirhan Sirhan</element>
+                <element>Leon Czolgosz</element>
+                <element>John Wilkes Booth</element>
+            </incorrect_answers>
+            <question>Who assassinated President James A. Garfield?</question>
+            <type>multiple</type>
+        </puzzle>
+    </results>
+</root>

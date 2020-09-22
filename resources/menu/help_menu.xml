@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<menu title="Help Menu" description="You asked for help, what item do you want to learn about?">
+    <story title="Story Details" description="This is a text based game, intro to what this help portion will be about.">
+        <winning title="How do I win ?" description="You can win by finding the boss and defeating him.">
+            <find_bos title ="How to find the boss ?" description=" The Boss randomly spawns when a magical stone is picked up in any room!">
+            </find_bos>
+            <kill_boss title="How to kill the boss ?" description="You need special items to defeat Bezos. They are sword, shield, potion, ...">
+            </kill_boss>
+        </winning>
+        <rooms title="What are rooms ?" description="Rooms are the places where player might see items or/and monsters. Rooms are created instantly as player moves in any direction.">
+        </rooms>
+        <items title="What are items ?" description="Items are randomly generated things player can pickup or drop off in each room. There are certain upgraded items (magical stones) that you can only pickup after you have adventures more than 5 rooms.">
+        </items>
+        <survival title="How do I survive ?" description="You kill the monsters and keep your life value above 0.">
+        </survival>
+    </story>
+    <gameplay title="Game Controls" description="To play the game, you type commands into the console. There are a plethora of commands to choose from, here are a few options. To call any of these, it is [command] [option]">
+<!--    <gameplay title="Game Controls" description="ARD2.0 only utilizes movement from arrow keys.">-->
+        <move title="move" description="to move around the game you say move [direction]. Directions are north, south, west, east.">
+        </move>
+        <pickup title="pickup" description="to pick up an item you say pickup [item]. If the item is in the room and can be picked up, it is added to your inventory and removed from the room.">
+        </pickup>
+        <drop title="drop" description="to drop an item from your inventory you say drop [item] and if the item can be dropped, it will be removed from your inventory and into the room">
+        </drop>
+        <attack title="fight" description="say fight [monster] for each round of fighting. The order of player fighting monster and monster attacking player is randomized for each round.">
+        </attack>
+        <useSpecialPower title="use power" description="to use the special power of the hero you have chosen, you have to have [power stone] in player inventory.">
+        </useSpecialPower>
+    </gameplay>
+</menu>

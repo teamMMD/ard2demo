@@ -11,6 +11,14 @@ public class Main {
 
     public static String humanPlayerName;
 
+    public static String getHumanPlayerName() {
+        return humanPlayerName;
+    }
+
+    public static void setHumanPlayerName(String humanPlayerName) {
+        Main.humanPlayerName = humanPlayerName;
+    }
+
     public static void main(String[] args) {
 //        setHumanPlayerName();
 

@@ -40,7 +40,6 @@ public class GameControlsScreen implements Screen {
                 return new QuitScreen(playScreen);
         }
         return this;
-        //return new LoadingScreen(playScreen);
     }
 
 }
