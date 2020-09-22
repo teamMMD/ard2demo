@@ -35,12 +35,12 @@ public class LoadingScreen implements Screen {
         System.out.println(key.getKeyCode());
         switch (key.getKeyCode()) {
             case KeyEvent.VK_R:
-//                if (playScreen != null) {
-//                    return playScreen;
-//                } else {
-//                    return new LoadingScreen(playScreen);
-//                }
-                return Objects.requireNonNullElseGet(playScreen, () -> new LoadingScreen(playScreen));
+                if (playScreen != null) {
+                    return playScreen;
+                } else {
+                    return new LoadingScreen(playScreen);
+                }
+//                return Objects.requireNonNullElseGet(playScreen, () -> new LoadingScreen(playScreen));
             case KeyEvent.VK_ENTER:
             return new PlayerNameScreen();
             case KeyEvent.VK_H:

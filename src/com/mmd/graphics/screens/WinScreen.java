@@ -28,7 +28,7 @@ public class WinScreen implements Screen {
         saveScoreToFile();
 
         terminal.writeCenter("!!! CONGRATS YOU WIN !!!", 5, Color.orange);
-        terminal.writeCenter( readNameFromTxtFile() + " view Scores Screen to view your score!", 11, Color.white);
+        terminal.writeCenter( readNameFromTxtFile() + ", hit [S] to view your score!", 11, Color.white);
         terminal.writeCenter("Press [ESC] to exit, [S] to see all high scores, or [Enter] to play again =)", 22, Color.gray);
     }
 
@@ -71,10 +71,13 @@ public class WinScreen implements Screen {
 
     private String readNameFromTxtFile(){
         try {
-            String line = Files.readAllLines(Paths.get("resources/save_file/name.txt")).get(0);
+            if (Files.readAllLines(Paths.get("resources/save_file/name.txt")).size() > 0) {
+                String line = Files.readAllLines(Paths.get("resources/save_file/name.txt")).get(0);
             return line;
+        }
         } catch (IOException e) {
             e.printStackTrace();
+            return "temp";
         }
         return "";
     }

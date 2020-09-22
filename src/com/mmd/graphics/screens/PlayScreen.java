@@ -32,7 +32,7 @@ public class PlayScreen implements Screen {
                 player.updateHealth(-30);
                 monster.setX(-1);
                 monster.setY(-1);
-                monsterInRoom = false;
+//                monsterInRoom = false;
                 ap.writeCenter("You fought the monster!", 22, Color.RED);
             }
 //            System.out.println("player: " + player.getX() + " - " + player.getY());
@@ -40,6 +40,9 @@ public class PlayScreen implements Screen {
             player.updateHealth(-1);
             displayRoom(ap);
             displayUI(ap);
+        } else if (!monster.isAlive(this) && player.doorCheck(player.getX(), player.getY())) {
+            ap.writeCenter("Thanks for playing the demo... more to come soon!", 11, Color.orange);
+             monsterInRoom = false;
         } else {
             ap.writeCenter("Press [up]/[w] to move to the next room!", 11, Color.GREEN);
             ap.writeCenter("...if you dare...", 12, Color.GREEN);
@@ -85,16 +88,15 @@ public class PlayScreen implements Screen {
 
     public Screen respondToUserInput(KeyEvent key) {
 //        System.out.println("Health: " + player.getHealth());
-        if (monster.isAlive(this)) {
-            System.out.println("AKL;DFAKL;JSDFL;JKSDF");
+        if (monsterInRoom) System.out.println("true?");
+        if (!monsterInRoom) {
             return new WinScreen(this, playerNameScreen);
         }
-        if (true) System.out.println("true?");
         if (player.getHealth() < 1) return new LoseScreen(this);
         if (moveOn) return new PlayScreen();
         switch (key.getKeyCode()) {
             case KeyEvent.VK_ESCAPE:
-                System.exit(1);
+                return new QuitScreen(this);
             case KeyEvent.VK_ENTER:
                 return new PlayScreen();
             case KeyEvent.VK_W:

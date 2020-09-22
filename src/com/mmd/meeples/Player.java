@@ -60,6 +60,13 @@ public class Player extends Meeple {
         return doorPresent;
     }
 
+    public boolean monsterCheck(int dx, int dy) {
+        Boolean monsterCheck = false;
+        if (room.coordinatePlane[dx][dy].glyph() == (char) 123)
+            monsterCheck = true;
+        return monsterCheck;
+    }
+
     public StringBuilder getInv() {
         StringBuilder invStr = new StringBuilder();
         for (String i : inv)

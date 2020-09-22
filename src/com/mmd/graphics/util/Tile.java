@@ -11,7 +11,7 @@ public enum Tile {
     MDOOR((char)196, Color.CYAN),               // "─"
     RDOOR((char)217, Color.CYAN),               // "┘"
     // doors are three part: left+mid+right -->   "└─┘"
-    MONSTER((char)123, Color.RED);
+    MONSTER((char)123, Color.RED);              // "{"
 
     private Color color;
     char glyph;
