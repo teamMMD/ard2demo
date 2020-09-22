@@ -88,7 +88,6 @@ public class PlayScreen implements Screen {
 
     public Screen respondToUserInput(KeyEvent key) {
 //        System.out.println("Health: " + player.getHealth());
-        if (monsterInRoom) System.out.println("true?");
         if (!monsterInRoom) {
             return new WinScreen(this, playerNameScreen);
         }
