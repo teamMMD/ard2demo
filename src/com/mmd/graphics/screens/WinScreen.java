@@ -28,8 +28,7 @@ public class WinScreen implements Screen {
         saveScoreToFile();
 
         terminal.writeCenter("!!! CONGRATS YOU WIN !!!", 5, Color.orange);
-
-        terminal.writeCenter( readNameFromTxtFile() + " + your score is XXX", 11, Color.white);
+        terminal.writeCenter( readNameFromTxtFile() + " view Scores Screen to view your score!", 11, Color.white);
         terminal.writeCenter("Press [ESC] to exit, [S] to see all high scores, or [Enter] to play again =)", 22, Color.gray);
     }
 
