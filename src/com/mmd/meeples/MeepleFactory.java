@@ -2,9 +2,12 @@ package com.mmd.meeples;
 
 import asciiPanel.AsciiPanel;
 import com.mmd.environment.Room;
+import com.mmd.graphics.util.Tile;
+
+import java.awt.*;
 
 public class MeepleFactory {
-    private Room room;
+    public Room room;
 
     public MeepleFactory(Room room) {
         this.room = room;
@@ -15,7 +18,7 @@ public class MeepleFactory {
 //        room.entryDoor(player);
 //    }
 
-    public static Monster createMonster() {
-        return new Monster();
-    }
+//    public static Monster createMonster() {
+//        return new Monster((char) 237, Color.RED);
+//    }
 }

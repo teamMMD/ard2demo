@@ -89,7 +89,7 @@ public class Room {
     public void generateRandomNormalMonsters() {
         int number = random.nextInt(100);
         if (number < 80) {
-            addMonster(MeepleFactory.createMonster());
+            addMonster(new Monster(this, (char) 123, Color.MAGENTA));
         }
     }
 
