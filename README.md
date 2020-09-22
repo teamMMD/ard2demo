@@ -20,6 +20,8 @@ ARD, aka "Another Random Destiny" was a Zork-esque text-based adventure - ARD2.0
 ## Full demo gameplay video at the link below (and/or watch the gifs below)
 [https://youtu.be/JI7o41hfmTU](https://youtu.be/JI7o41hfmTU)
 
+![](./demogifs/ard2loadingandnameentry.gif)
+
 </br>
 
 ## Start Here
@@ -55,7 +57,7 @@ To run ard2demo you'll need...
 
 *Enter your dream name to customize your high-score and more*
 
-![]()
+![](./demogifs/ard2loadingandnameentry.gif)
 
 ### Playthru!
 
@@ -71,22 +73,22 @@ To run ard2demo you'll need...
 
 *so you can pause and/or view help menus at anytime*
 
-![https://giphy.com/gifs/MpnaGKxQ52wfsgmrC0](https://giphy.com/gifs/MpnaGKxQ52wfsgmrC0)
+![](./demogifs/ard2helpmenulocationpersistance.gif)
 
 ### Loss Condition
 
 *no more health left to use-up as you move*
 
-![](https://giphy.com/gifs/Rm766g8lspQsVMpgXk)
+![](./demogifs/ard2deathbysteps.gif)
 
 *the monster mortally wounds you so you bleed out on the next step*
 
-![](https://giphy.com/gifs/1bA4uVmDJkQyE1yl7U)
+![](./demogifs/ard2deathbycreature.gif)
 
 ### Quit Confirmation Screen
 **so you don't quit on accident!**
 
-![](https://giphy.com/gifs/k6XmhhkaKEyaCzjWa6)
+![](./demogifs/ard2quitscreen.gif)
 
 
 </br>
