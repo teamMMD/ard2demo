@@ -19,7 +19,6 @@
 *.tar.gz
 *.rar
 *.iml
-*.xml
 .idea/uiDesigner.xml
 .idea/
 *.kotlin_module

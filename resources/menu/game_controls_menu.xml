@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<menu title="Game Controls" description="ARD2.0 only utilizes movement from arrow keys.">
+    <north title="north" description="To move North press the -up- arrow key.">
+    </north>
+    <south title="south" description="To move South press the -down- arrow key.">
+    </south>
+    <east title="east" description="To move East press the -right- arrow key.">
+    </east>
+    <west title="west" description="To move West press the -left- arrow key.">
+    </west>
+</menu>

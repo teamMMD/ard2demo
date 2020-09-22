@@ -9,7 +9,15 @@ import java.util.Scanner;
 
 public class Main {
 
-    public String humanPlayerName;
+    public static String humanPlayerName;
+
+    public static String getHumanPlayerName() {
+        return humanPlayerName;
+    }
+
+    public static void setHumanPlayerName(String humanPlayerName) {
+        Main.humanPlayerName = humanPlayerName;
+    }
 
     public static void main(String[] args) {
 //        setHumanPlayerName();
@@ -30,7 +38,7 @@ public class Main {
     public static void setHumanPlayerName() {
         Scanner input = new Scanner(System.in);
         System.out.println("Please input your adventurer's name: ");
-        String humanPlayerName = input.nextLine();
+        humanPlayerName = input.nextLine();
     }
 
 }

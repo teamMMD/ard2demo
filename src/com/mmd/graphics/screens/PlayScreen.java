@@ -8,10 +8,13 @@ import com.mmd.meeples.Player;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 
 public class PlayScreen implements Screen {
     private int screenWidth = 79;
     private int screenHeight = 22;
+
     private Room room = new Room(79, 22);
     private Player player = new Player(room, (char)65, Color.orange, 39, room.getHeight() - 2);;
     private Monster monster = new Monster(room, Tile.MONSTER.glyph(), Tile.MONSTER.color());
@@ -41,6 +44,10 @@ public class PlayScreen implements Screen {
 //            respondToUserInput(key);
             moveOn = true;
         }
+    }
+
+    public WinScreen winCondition(PlayScreen playScreen, PlayerNameScreen playerNameScreen) {
+        return new WinScreen(playScreen, playerNameScreen);
     }
 
     private void displayRoom(AsciiPanel ap) {
@@ -73,6 +80,7 @@ public class PlayScreen implements Screen {
     }
 
     @Override
+
     public Screen respondToUserInput(KeyEvent key) {
 //        System.out.println("Health: " + player.getHealth());
         if (player.getHealth() < 1) return new LoseScreen(this);
@@ -80,8 +88,6 @@ public class PlayScreen implements Screen {
         switch (key.getKeyCode()) {
             case KeyEvent.VK_ESCAPE:
                 System.exit(1);
-            case KeyEvent.VK_P:
-                return new TempScreen(this);
             case KeyEvent.VK_ENTER:
                 return new PlayScreen();
             case KeyEvent.VK_W:
@@ -102,8 +108,17 @@ public class PlayScreen implements Screen {
                 player.moveBy(1, 0); break;
             case KeyEvent.VK_H:
                 return new InitialHelpScreen(this);
+            case KeyEvent.VK_BACK_SLASH:
+                return new WinScreen(this, playerNameScreen);
+            case KeyEvent.VK_COMMA:
+                return new LoseScreen(this);
         }
         return this;
     }
 
+    public void clearNameTxtFile() throws FileNotFoundException {
+        PrintWriter writer = new PrintWriter("resources/save_file/name.txt");
+        writer.print("");
+        writer.close();
+    }
 }

@@ -34,7 +34,7 @@ public class InitialHelpScreen implements Screen {
 
         ap.writeCenter("Press [B] to resume game", 11);
         ap.writeCenter("Press [Q] to quit", 12);
-        ap.writeCenter("Press [Backspace] to return to the loading screen", 22, Color.gray);
+        ap.writeCenter("Press [Backspace] to open the loading screen", 22, Color.gray);
     }
 
     @Override
@@ -50,6 +50,8 @@ public class InitialHelpScreen implements Screen {
                 return new StoryDetailsHelpScreen(playScreen);
             case KeyEvent.VK_1:
                 return new GameControlsScreen(playScreen);
+            case KeyEvent.VK_Q:
+                return new QuitScreen(playScreen);
         }
         return this;
     }

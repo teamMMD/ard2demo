@@ -5,9 +5,7 @@ import asciiPanel.AsciiPanel;
 import javax.sound.sampled.Line;
 import java.awt.*;
 import java.awt.event.KeyEvent;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
@@ -70,18 +68,12 @@ public class ScoreScreen implements Screen {
         }
 
         terminal.writeCenter("SCORES:", 2, Color.orange);
-        terminal.writeCenter("Press [B] to return to the previous screen", 21, Color.gray);
-        terminal.writeCenter("Press [Backspace] to return to the loadingScreen", 22, Color.gray);
+        terminal.writeCenter("Press [ANY KEY] to go to the loading screen", 21, Color.gray);
     }
 
     @Override
-    public Screen respondToUserInput(KeyEvent key) {
-        switch (key.getKeyCode()) {
-            case KeyEvent.VK_BACK_SPACE:
-                return new LoadingScreen(playScreen);
-            case KeyEvent.VK_B:
-                return new StoryDetailsHelpScreen(playScreen);
-        }
+    public Screen respondToUserInput(KeyEvent key) throws FileNotFoundException {
+        playScreen.clearNameTxtFile();
         return new LoadingScreen(playScreen);
     }
 }
