@@ -14,25 +14,3 @@ public class MiniMap {
     }
 
 }
-
-
-//{
-//    start: {
-//        north: room2,
-//        south: null,
-//        east: null,
-//        west: null,
-//        },
-//    room2: {
-//        north: room3,
-//        south: start,
-//        east: room4,
-//        west: room5,
-//        },
-//    room3: {
-//        north: room6,
-//        south: room2,
-//        east: room7,
-//        west: room8,
-//        }
-//}

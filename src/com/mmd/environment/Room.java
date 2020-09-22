@@ -36,8 +36,6 @@ public class Room {
                     coordinatePlane[x][y] = Tile.GROUND;
             }
         }
-        // randomizer:
-
     }
 
     public Tile[][] getCoordinatePlane() {
@@ -85,6 +83,5 @@ public class Room {
         }
         return coordinatePlaneString;
     }
-
 
 }
