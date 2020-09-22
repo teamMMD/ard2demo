@@ -63,7 +63,7 @@ public class PlayScreen implements Screen {
                     room.coordinatePlane[x-1][y] = Tile.MDOOR;
                     ap.write(room.coordinatePlane[x-1][y].glyph(), x-1, y, Color.CYAN);
                     room.coordinatePlane[x][y] = Tile.RDOOR;
-                    ap.write(room.coordinatePlane[x][y].glyph(), x, y);
+                    ap.write(room.coordinatePlane[x][y].glyph(), x, y, Color.CYAN);
                 }
                 else if (x == monster.getX() && y == monster.getY() && monsterInRoom)
                     ap.write(monster.glyph(), x, y, monster.color());
