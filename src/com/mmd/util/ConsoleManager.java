@@ -16,7 +16,7 @@ import java.util.List;
 public class ConsoleManager {
     public String l1 ="Welcome to 'ARD' the game where you get ";
     public String l2 = "Another Random Destiny every time you play!";
-    public String l3 = "To learn about the game, press [h].";
+    public String l3 = "To learn about the game, press [H].";
 
     /**
      * method made package level access only on purpose

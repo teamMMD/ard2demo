@@ -25,8 +25,9 @@ public class StoryDetailsHelpScreen implements Screen {
         ap.writeCenter("Press [0] to see " + storyDetails.getChild(0).getTitle(), 9, Color.white);
         ap.writeCenter("Press [1] to see more information", 10, Color.white);
 
-        ap.writeCenter("Press [B] to return to the previous screen", 21, Color.gray);
-        ap.writeCenter("Press [Backspace] to return to the loadingScreen", 22, Color.gray);
+        ap.writeCenter("Press [B] to return to the previous screen", 20, Color.gray);
+        ap.writeCenter("Press [Backspace] to return to the loadingScreen", 21, Color.gray);
+        ap.writeCenter("Press [Q] to quit", 22, Color.gray);
     }
 
     @Override
@@ -40,8 +41,9 @@ public class StoryDetailsHelpScreen implements Screen {
                 return new LoadingScreen(playScreen);
             case KeyEvent.VK_B:
                 return new InitialHelpScreen(playScreen);
+            case KeyEvent.VK_Q:
+                return new QuitScreen(playScreen);
         }
         return new LoadingScreen(playScreen);
     }
-
 }

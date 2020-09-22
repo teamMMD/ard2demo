@@ -32,8 +32,9 @@ public class RoomsItemsSurviveHelpScreen implements Screen{
         terminal.writeCenter(howDoISurvive.getTitle(), 13, Color.orange);
         terminal.writeCenter(howDoISurvive.getDescription().substring(0,55), 14, Color.white);
 
-        terminal.writeCenter("Press [B] to return to the previous screen", 21,Color.gray);
-        terminal.writeCenter("Press [Backspace] to return to the loadingScreen", 22, Color.gray);
+        terminal.writeCenter("Press [B] to return to the previous screen", 20,Color.gray);
+        terminal.writeCenter("Press [Backspace] to return to the loadingScreen", 21, Color.gray);
+        terminal.writeCenter("Press [Q] to quit", 22, Color.gray);
     }
 
     @Override
@@ -43,6 +44,8 @@ public class RoomsItemsSurviveHelpScreen implements Screen{
                 return new LoadingScreen(playScreen);
             case KeyEvent.VK_B:
                 return new StoryDetailsHelpScreen(playScreen);
+            case KeyEvent.VK_Q:
+                return new QuitScreen(playScreen);
         }
         return new LoadingScreen(playScreen);
     }
