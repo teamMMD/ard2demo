@@ -1,6 +1,7 @@
 package com.mmd.meeples;
 
 import com.mmd.environment.Room;
+import com.mmd.graphics.screens.PlayScreen;
 
 import java.awt.*;
 import java.util.concurrent.ThreadLocalRandom;
@@ -14,6 +15,10 @@ public class Monster extends Meeple {
         setX(ThreadLocalRandom.current().nextInt(2, 79-2));
         setY(ThreadLocalRandom.current().nextInt(2, 22-2));
         updateHealth(30);
+    }
+
+    public boolean isAlive(PlayScreen ps) {
+        return !ps.monsterInRoom;
     }
 
     @Override

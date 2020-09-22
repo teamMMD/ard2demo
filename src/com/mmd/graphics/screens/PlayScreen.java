@@ -19,7 +19,8 @@ public class PlayScreen implements Screen {
     private Player player = new Player(room, (char)65, Color.orange, 39, room.getHeight() - 2);;
     private Monster monster = new Monster(room, Tile.MONSTER.glyph(), Tile.MONSTER.color());
     private boolean moveOn = false;
-    private boolean monsterInRoom = true;
+    public boolean monsterInRoom = true;
+//    private boolean monsterDead = false;
 
     PlayerNameScreen playerNameScreen;
 
@@ -28,15 +29,14 @@ public class PlayScreen implements Screen {
         if (!player.doorCheck(player.getX(), player.getY())) {
 //            moveOn = false;
             if (player.x == monster.x && player.y == monster.y) {
-                System.out.println("test");
                 player.updateHealth(-30);
                 monster.setX(-1);
                 monster.setY(-1);
                 monsterInRoom = false;
                 ap.writeCenter("You fought the monster!", 22, Color.RED);
             }
-            System.out.println("player: " + player.getX() + " - " + player.getY());
-            System.out.println("monster: " + monster.getX() + " - " + monster.getY());
+//            System.out.println("player: " + player.getX() + " - " + player.getY());
+//            System.out.println("monster: " + monster.getX() + " - " + monster.getY());
             player.updateHealth(-1);
             displayRoom(ap);
             displayUI(ap);
@@ -85,6 +85,11 @@ public class PlayScreen implements Screen {
 
     public Screen respondToUserInput(KeyEvent key) {
 //        System.out.println("Health: " + player.getHealth());
+        if (monster.isAlive(this)) {
+            System.out.println("AKL;DFAKL;JSDFL;JKSDF");
+            return new WinScreen(this, playerNameScreen);
+        }
+        if (true) System.out.println("true?");
         if (player.getHealth() < 1) return new LoseScreen(this);
         if (moveOn) return new PlayScreen();
         switch (key.getKeyCode()) {

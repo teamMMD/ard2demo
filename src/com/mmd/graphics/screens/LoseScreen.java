@@ -18,7 +18,6 @@ public class LoseScreen implements Screen {
         terminal.writeCenter("Would you like to try again? :) ", 7, Color.orange);
 
         // show scores
-        terminal.writeCenter("currentPlayer.getName() + your score is XXX", 11, Color.white);
         terminal.writeCenter("Press [ESC] to exit, [S] to see all high scores, or [Enter] to play again =)", 22, Color.gray);
     }
 
