@@ -3,7 +3,7 @@
 
 ARD, aka "Another Random Destiny" was a Zork-esque text-based adventure - ARD2.0 takes that original work and slaps it into our own ASCII based graphical rendering engine!
 
-</br>
+![](./demogifs/ard2loadingandnameentry.gif)
 
 #### Find related projects on github:
  * https://github.com/teamMMD
@@ -17,10 +17,10 @@ ARD, aka "Another Random Destiny" was a Zork-esque text-based adventure - ARD2.0
 #### AsciiPanel stuff:
  * http://trystans.blogspot.com/
 
-## Full demo gameplay video at the link below (and/or watch the gifs below)
+### Full demo gameplay video at the link below (and/or watch the gifs below)
 [https://youtu.be/JI7o41hfmTU](https://youtu.be/JI7o41hfmTU)
 
-![](./demogifs/ard2loadingandnameentry.gif)
+![](./demogifs/ard2deathbysteps.gif)
 
 </br>
 
