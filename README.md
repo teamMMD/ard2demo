@@ -18,7 +18,7 @@ ARD, aka "Another Random Destiny" was a Zork-esque text-based adventure - ARD2.0
  * http://trystans.blogspot.com/
 
 ## Full demo gameplay video at the link below (and/or watch the gifs below)
-![https://youtu.be/JI7o41hfmTU](https://youtu.be/JI7o41hfmTU)
+[https://youtu.be/JI7o41hfmTU](https://youtu.be/JI7o41hfmTU)
 
 </br>
 
