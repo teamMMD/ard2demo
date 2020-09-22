@@ -1,60 +1,15 @@
-<Final score for this game @2020-09-22T08:06:27.432441>
-[ asdad ] (Iron Man): 1889 points
+<Final score for this game @2020-09-22T08:53:31.275199>
+[ matthew ] (Iron Man): 2633 points
 
-<Final score for this game @2020-09-22T08:07:26.695503>
-[ asdad ] (Iron Man): 1433 points
+<Final score for this game @2020-09-22T08:54:49.902810>
+[ danny ] (Iron Man): 2833 points
 
-<Final score for this game @2020-09-22T08:10:12.232455>
-[ asdad ] (Iron Man): 435 points
+<Final score for this game @2020-09-22T09:00:34.194630>
+[ maya ] (Iron Man): 3532 points
 
-<Final score for this game @2020-09-22T08:10:12.726784>
-[ asdad ] (Iron Man): 4309 points
+<Final score for this game @2020-09-22T11:57:23.804346>
+[ please ] (Iron Man): 1592 points
 
-<Final score for this game @2020-09-22T08:10:12.810937>
-[ asdad ] (Iron Man): 703 points
-
-<Final score for this game @2020-09-22T08:10:13.020959>
-[ asdad ] (Iron Man): 1858 points
-
-<Final score for this game @2020-09-22T08:10:13.195670>
-[ asdad ] (Iron Man): 3944 points
-
-<Final score for this game @2020-09-22T08:10:13.336162>
-[ asdad ] (Iron Man): 218 points
-
-<Final score for this game @2020-09-22T08:10:13.501039>
-[ asdad ] (Iron Man): 4970 points
-
-<Final score for this game @2020-09-22T08:10:51.128766>
-[ asdad ] (Iron Man): 112 points
-
-<Final score for this game @2020-09-22T08:15:55.177693>
-[ asdad ] (Iron Man): 101 points
-
-<Final score for this game @2020-09-22T08:16:49.738288>
-[ asdad ] (Iron Man): 1224 points
-
-<Final score for this game @2020-09-22T08:21:17.810831>
-[ asdad ] (Iron Man): 4663 points
-
-<Final score for this game @2020-09-22T08:22:42.772329>
-[ asd ] (Iron Man): 3814 points
-
-<Final score for this game @2020-09-22T08:23:03.127325>
-[ asd ] (Iron Man): 3638 points
-
-<Final score for this game @2020-09-22T08:24:57.591285>
-[  ] (Iron Man): 1728 points
-
-<Final score for this game @2020-09-22T08:28:44.173798>
-[ asd ] (Iron Man): 3897 points
-
-<Final score for this game @2020-09-22T08:28:48.906559>
-[  ] (Iron Man): 2852 points
-
-<Final score for this game @2020-09-22T08:29:08.986495>
-[ asd ] (Iron Man): 4164 points
-
-<Final score for this game @2020-09-22T08:29:22.231022>
-[ asd ] (Iron Man): 3176 points
+<Final score for this game @2020-09-22T13:12:48.199635>
+[ aimatthew ] (Iron Man): 2260 points
 

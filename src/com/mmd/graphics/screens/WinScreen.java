@@ -73,12 +73,12 @@ public class WinScreen implements Screen {
         try {
             if (Files.readAllLines(Paths.get("resources/save_file/name.txt")).size() > 0) {
                 String line = Files.readAllLines(Paths.get("resources/save_file/name.txt")).get(0);
-            return line;
+                playScreen.clearNameTxtFile();
+                return line;
         }
         } catch (IOException e) {
             e.printStackTrace();
-            return "temp";
         }
-        return "";
+        return "test";
     }
 }

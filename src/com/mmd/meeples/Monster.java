@@ -18,7 +18,11 @@ public class Monster extends Meeple {
     }
 
     public boolean isAlive(PlayScreen ps) {
-        return !ps.monsterInRoom;
+//        return !ps.monsterInRoom;
+        if (!ps.monsterInRoom)
+            return true;
+        System.out.println("win should now be possible");
+        return false;
     }
 
     @Override

@@ -45,7 +45,19 @@ public class Room {
         populateCoordinatePlane();
     }
 
-    public Room(String description, int id) {
+    public Room(String roomName, int x, int y) {
+        this.roomName = roomName;
+        setWidth(x);
+        setHeight(y);
+        setCoordinatePlane(getWidth(), getHeight());
+        populateCoordinatePlane();
+    }
+
+    public Room(String description, int id, int x, int y) {
+        setWidth(x);
+        setHeight(y);
+        setCoordinatePlane(getWidth(), getHeight());
+        populateCoordinatePlane();
         this.description = description;
         this.id = id;
         items = new ArrayList<>();

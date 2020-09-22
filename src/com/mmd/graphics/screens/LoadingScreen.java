@@ -22,9 +22,9 @@ public class LoadingScreen implements Screen {
         System.out.println(cm.l1 + cm.l2 + cm.l3);
 
         //terminal.writeCenter(cm.l1, 1, Color.black, Color.green);
-        terminal.writeCenter(cm.l1, 3, Color.orange);
-        terminal.writeCenter(cm.l2, 4, Color.orange);
-        terminal.writeCenter(cm.l3, 20, Color.gray);
+        terminal.writeCenter(cm.l1, 4, Color.orange);
+        terminal.writeCenter(cm.l2, 5, Color.orange);
+        terminal.writeCenter(cm.l3, 21, Color.gray);
 
         terminal.writeCenter("Press [R] to resume game", 18);
         terminal.writeCenter("[::]    Press [Enter] to start yet 'Another Random Destiny'    [::]", 11, Color.white);

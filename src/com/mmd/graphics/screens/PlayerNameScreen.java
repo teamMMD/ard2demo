@@ -12,14 +12,24 @@ public class PlayerNameScreen implements Screen {
 
     @Override
     public void displayInAP(AsciiPanel ap) {
-        ap.writeCenter("Please enter your name:", 10);
-        ap.writeCenter(playerName, 13, Color.MAGENTA);
+        ap.writeCenter("You've fallen asleep after watching 'The Labrynth'", 4);
+        ap.writeCenter("and eating some questionable leftovers.", 5);
+        ap.writeCenter("Maybe not the best bet considering your long standing", 7);
+        ap.writeCenter("irrational fear of being IronMan trapped in his 'A' suit", 8);
+        ap.writeCenter("in a never ending randomly generated maze", 9);
+        ap.writeCenter("Hopefully there won't be any monsters...", 10);
+        ap.writeCenter("Please enter your dream name:", 14, Color.GRAY);
+        ap.writeCenter(playerName, 16, Color.ORANGE);
         ap.setName(playerName);
     }
 
     @Override
     public Screen respondToUserInput(KeyEvent key) {
-        if (key.getKeyCode() != KeyEvent.VK_ENTER || playerName.length() > 8) {
+        if (playerName.length() > 8) {
+            saveNameToFile(getPlayerName());
+            return new PlayScreen();
+        }
+        if (key.getKeyCode() != KeyEvent.VK_ENTER) {
             playerName = playerName + key.getKeyChar();
         } else if (key.getKeyCode() == KeyEvent.VK_ENTER) {
             // write playerName to save_file

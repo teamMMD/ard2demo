@@ -15,7 +15,7 @@ public class PlayScreen implements Screen {
     private int screenWidth = 79;
     private int screenHeight = 22;
 
-    private Room room = new Room(79, 22);
+    private Room room = new Room("Proving Grounds", 79, 22);
     private Player player = new Player(room, (char)65, Color.orange, 39, room.getHeight() - 2);;
     private Monster monster = new Monster(room, Tile.MONSTER.glyph(), Tile.MONSTER.color());
     private boolean moveOn = false;
@@ -26,6 +26,7 @@ public class PlayScreen implements Screen {
 
     @Override
     public void displayInAP(AsciiPanel ap) {
+        ap.writeCenter("Press [H] for help", 22, Color.GRAY);
         if (!player.doorCheck(player.getX(), player.getY())) {
 //            moveOn = false;
             if (player.x == monster.x && player.y == monster.y) {
@@ -42,8 +43,12 @@ public class PlayScreen implements Screen {
             displayUI(ap);
         } else if (!monster.isAlive(this) && player.doorCheck(player.getX(), player.getY())) {
             ap.writeCenter("Thanks for playing the demo... more to come soon!", 11, Color.orange);
+            ap.writeCenter("Hit any button to see the win screen.", 23, Color.gray);
              monsterInRoom = false;
         } else {
+            if (player.doorCheck(player.getX(), player.getY()))
+                ap.writeCenter("You found a door!", 22, Color.CYAN);
+//                wait(3000);
             ap.writeCenter("Press [up]/[w] to move to the next room!", 11, Color.GREEN);
             ap.writeCenter("...if you dare...", 12, Color.GREEN);
 //            respondToUserInput(key);
@@ -81,11 +86,10 @@ public class PlayScreen implements Screen {
     public void displayUI(AsciiPanel ap) {
         ap.write("Health: " + player.getHealth() + " / " + player.maxHP, 4, 23, Color.orange);
         ap.write("Inventory: " + player.getInv(), 54, 23);
-        ap.write("RoomName: " + "Proving Grounds", 54, 0);
+        ap.write("RoomName: " + room.getRoomName(), 54, 0);
     }
 
     @Override
-
     public Screen respondToUserInput(KeyEvent key) {
 //        System.out.println("Health: " + player.getHealth());
         if (!monsterInRoom) {
