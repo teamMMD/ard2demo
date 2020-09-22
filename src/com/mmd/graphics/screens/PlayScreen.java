@@ -21,6 +21,8 @@ public class PlayScreen implements Screen {
     private boolean moveOn = false;
     private boolean monsterInRoom = true;
 
+    PlayerNameScreen playerNameScreen;
+
     @Override
     public void displayInAP(AsciiPanel ap) {
         if (!player.doorCheck(player.getX(), player.getY())) {
